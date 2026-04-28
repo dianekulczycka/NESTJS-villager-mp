@@ -7,12 +7,12 @@ export const USER_PUBLIC_SELECT: Prisma.userSelect = {
   role: true,
   sellerType: true,
   createdAt: true,
+  isBanned: true,
 };
 
 export const USER_SELF_SELECT: Prisma.userSelect = {
   ...USER_PUBLIC_SELECT,
   email: true,
-  isBanned: true,
   bannedAt: true,
 };
 
