@@ -26,7 +26,7 @@ export const registerSchema = z
 
         username: z
             .string()
-            .regex(/^[A-Za-z0-9\s]{2,}$/, 'Name must be gt 2 chars')
+            .regex(/^[A-Za-z0-9\s]{2,}$/, 'Name must be gt 2 chars, only letters and numbers')
             .refine((v) => !hasSwearWords(v), {
                 message: 'Bad language used',
             }),
